@@ -97,7 +97,7 @@ $(document).ready(function() {
     // Mobile Navegation
     $('.js--nav-icon').click(function() {
         var nav = $('.js--main-nav');
-        var icon = $('.js--nav-icon ion-icon')
+        var icon = $('.js--nav-icon ion-icon');
 
         nav.slideToggle(200);
         
@@ -122,7 +122,7 @@ $(document).ready(function() {
         $(window).scroll(function(){
             var nowScrollTop = $(this).scrollTop();
             if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
-                if ($('.js--main-nav').is(':visible')) {
+                if ($('.js--main-nav').is(':visible') && $(window).width()<767) {
                     $('.js--main-nav').slideToggle(0);
                 }
                 
